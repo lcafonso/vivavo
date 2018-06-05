@@ -22,7 +22,7 @@ Entrei neste projeto porque me orgulho das minhas raízes culturais e quero mant
         ]);
 
         App\Grandma::create([
-        	'local_id' => 2,
+        	'local_id' => 3,
             'name' => 'Lucinda Veloso',
             'slug' => str_slug('Lucinda Veloso'),
             'excerpt' => 'Boa tarde, o meu nome é Lucinda Veloso, tenho 60 anos de idade, sou natural de Vila Verde da Raia e sou doméstica. Vivo rodeada de afeto e ternura com o meu marido e a minha mãe. Os meus filhos residem no Porto e em Lisboa.
