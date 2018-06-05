@@ -7,6 +7,6 @@ $factory->define(App\Category::class, function (Faker $faker) {
     return [
         'name' => $title,
         'slug' => str_slug($title),
-        'body' => $faker->text(500),
+        'body' => $faker->text(200),
     ];
 });

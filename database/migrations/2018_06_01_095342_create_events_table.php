@@ -16,6 +16,8 @@ class CreateEventsTable extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
 
+            $table->integer('grandma_id')->unsigned();
+
             $table->string('name');
             $table->string('slug')->unique();
 
@@ -28,6 +30,11 @@ class CreateEventsTable extends Migration
             $table->string('file')->nullable();
 
             $table->timestamps();
+
+            //Ralation
+            $table->foreign('grandma_id')->references('id')->on('grandmas')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 

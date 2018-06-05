@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(LocalsTableSeeder::class);
         $this->call(PoisTableSeeder::class);
         $this->call(GrandmasTableSeeder::class);
+        $this->call(ActivitsTableSeeder::class);
+        $this->call(EventsTableSeeder::class);
     }
 }
