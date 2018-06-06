@@ -3,22 +3,30 @@
 @section('content')
 <div class="container">
 	<div class="col">
-		<h1>Lista de noticias</h1>
-		@foreach ($posts as $post) 
+		<h1>{{ $post->name }}</h1>
+		 
 		<div class="card">
 			<div class="card-header">
-				{{ $post->name }}
+				Categoria
+				<a href="#">{{ $post->category->name }}</a>
 			</div>
 			<div class="card-body">
 				@if($post->file)
 				<img src="{{ $post->file }}" class="card-img-top" alt="">
 				@endif
 				<p class="card-text">{{ $post->excerpt }}</p>
-				<a href="{{ route('post', $post->slug) }}" class="float-right">Ler mais</a>	
+				<hr>
+				{!! {{ $post->body }} !!}
+				<hr>
+				Etiquetas
+				@foreach($post->tags as $tag)
+				<a href="#">
+					{{ $tag->name }}
+				</a>
+				@endforeach
 			</div>
 		</div>	
-		@endforeach 
-		{{ $posts->render() }} 
+		  
 	</div>
 </div>
 @endsection

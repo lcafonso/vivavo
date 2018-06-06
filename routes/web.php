@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::redirect('/', 'news');
 
 
 Auth::routes();
@@ -22,3 +19,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('news', 'Web\PageController@news')->name('news');
+
+Route::get('news/{slug}', 'Web\PageController@post')->name('post');
