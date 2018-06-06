@@ -6,6 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Local extends Model
 {
+	protected $fillable = [
+		'district_id','name', 'slug', 'body'
+	];
+
+	public  function poi()
+	{
+		return $this->hasMany(Poi::class);
+	}
+
     public function district()
     {
         return $this->belongsTo('App\District');
