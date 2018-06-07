@@ -14,4 +14,10 @@ class Grandma extends Model
     {
         return $this->hasMany('App\Event');
     }
+
+    public function local()
+    {
+        return $this-belongsTo('App\Local');
+    }
+    
 }

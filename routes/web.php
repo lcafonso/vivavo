@@ -11,13 +11,11 @@
 |
 */
 
-Route::redirect('/', 'news');
-
+Route::redirect('/', 'events' );
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('news', 'Web\PageController@news')->name('news');
-
 Route::get('news/{slug}', 'Web\PageController@post')->name('post');
+Route::get('events', 'Web\PageController@events')->name('events');
+Route::get('events/{slug}', 'Web\PageController@event')->name('event');

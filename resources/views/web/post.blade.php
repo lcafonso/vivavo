@@ -8,7 +8,7 @@
 		<div class="card">
 			<div class="card-header">
 				Categoria
-				<a href="#">{{ $post->category->name }}</a>
+				<a href="#"> {{ $post->category->name }} </a>
 			</div>
 			<div class="card-body">
 				@if($post->file)
@@ -16,7 +16,7 @@
 				@endif
 				<p class="card-text">{{ $post->excerpt }}</p>
 				<hr>
-				{!! {{ $post->body }} !!}
+				{!! $post->body !!}
 				<hr>
 				Etiquetas
 				@foreach($post->tags as $tag)

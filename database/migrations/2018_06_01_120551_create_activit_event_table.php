@@ -19,7 +19,7 @@ class CreateActivitEventTable extends Migration
             $table->integer('activit_id')->unsigned();
             $table->integer('event_id')->unsigned();
 
-            $table->time('scheduled')->nullable();
+            $table->timestamp('scheduled')->default(DB::raw('CURRENT_TIMESTAMP'));
 
             $table->timestamps();
 
