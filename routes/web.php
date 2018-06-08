@@ -21,7 +21,7 @@ Route::get('news/{slug}', 'Web\PageController@post')->name('post');
 Route::get('events', 'Web\PageController@events')->name('events');
 Route::get('events/{slug}', 'Web\PageController@event')->name('event');
 Route::get('category/{slug}', 'Web\PageController@category')->name('category');
-Route::get('tags/{slug}', 'Web\PageController@tag')->name('tag');
+Route::get('tag/{slug}', 'Web\PageController@tag')->name('tag');
 
 //admin
 Route::resource('tags', 'Admin\TagController');
