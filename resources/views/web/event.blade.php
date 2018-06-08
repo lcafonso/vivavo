@@ -26,6 +26,7 @@
  					<p class="card-text"><b>{{ date_format(date_create($temp->scheduled), 'H:i') }}</b> - {{ $activit->name }}</p>
 				   	<hr>
 				@endforeach
+				<a href="/events" class="float-left">Voltar a lista</a>
 				<a href="#" class="float-right">Participar no evento</a>
 			</div>
 		</div>	

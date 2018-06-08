@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Viv@vo') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li><a class="nav-link" href="{{ route('news') }}">Noticias</a></li>
+                        <li><a class="nav-link" href="{{ route('events') }}">Eventos</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -44,6 +45,25 @@
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Admininistração
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('tags.index') }}">Etiquetas</a>
+                                    <a class="dropdown-item" href="{{ route('categories.index') }}">Categorias</a>
+                                    <a class="dropdown-item" href="#">Atividades</a>
+                                    <a class="dropdown-item" href="#">Locais</a>
+                                    <a class="dropdown-item" href="#">Distritos</a>
+                                    <a class="dropdown-item" href="#">Pontos de Interesse</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Utilizadores</a>
+                                    <a class="dropdown-item" href="#">Intervinientes (avós)</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="{{ route('posts.index') }}">Noticias</a>
+                                    <a class="dropdown-item" href="#">Eventos</a>
+                                </div>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

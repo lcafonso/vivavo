@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Post;
 use App\Event;
 use App\Grandma;
+use App\CAtegory;
 
 class PageController extends Controller
 {
@@ -28,9 +29,7 @@ class PageController extends Controller
 
     public function events() {
     	$events = Event::orderBy('id', 'DESC')->paginate(3);
-        //$events = \DB::table('events')->join('grandmas', 'grandmas.id', '=', 'events.grandma_id')
-        //        ->select('events.id as name', 'events.name', 'events.slug', 'events.data_time', 'events.local', 'events.excerpt', 'events.body', 'events.file', 'grandmas.name as grandma')->paginate(3);
-              
+        
     	return view('web.events', compact('events'));
     }
 
@@ -40,4 +39,23 @@ class PageController extends Controller
 
         return view('web.event', compact('event'));
     }
+
+
+    public function category($slug) {
+        $category = Category::where('slug',$slug)->pluck('id')->first();
+        $posts = Post::where('category_id',$category)->orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+
+        return view('web.posts', compact('posts'));
+    }
+
+
+    public function tag($slug) {
+        $posts = Post::whereHas('tags', function($query) use($slug){
+            $query->where('slug',$slug);
+        })->orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+
+        return view('web.posts', compact('posts'));
+
+    }
+
 }
