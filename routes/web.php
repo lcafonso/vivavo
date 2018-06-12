@@ -31,3 +31,6 @@ Route::resource('tags', 'Admin\TagController');
 Route::resource('categories', 'Admin\CategoryController');
 Route::resource('posts', 'Admin\PostController');
 
+
+//mail
+Route::get('send', 'Web\MailController@send')->name('send');

@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Web;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use Mail;
 use App\Guest;
+use App\Event;
 
 class GuestController extends Controller
 {
@@ -46,15 +48,26 @@ class GuestController extends Controller
 
         $temp =  $request->all();
 
+        $event  = Event::find($temp['event_id']);
+
+        
+
         $count = Guest::where(['event_id' => intval($temp['event_id']), 'email' => $temp['email'] ])->count();
         
         if (intval($count) == 0) {
+            
+            Mail::send(['text' => 'web.mail'],['name','Projeto Vivavo'], function($message) use($temp, $event) {
+                $message->to($temp['email'], $temp['name'])->subject('Confirmação para o evento: ' . $event->name );
+                $message->from('vivavo@ipb.pt','Vivavo');
+            });
+
             $guest = Guest::create($request->all());
+
         }else {
             return back()->with('info', 'Ja existe uma reserva neste evento com este email!');;
         }
 
-        return back()->with('info', 'Reserva criada com sucesso!');
+        return back()->with('info', 'Reserva criada com sucesso! Foi enviado um email de confirmação.');
     }
 
     /**
@@ -101,4 +114,6 @@ class GuestController extends Controller
     {
         //
     }
+
+
 }
