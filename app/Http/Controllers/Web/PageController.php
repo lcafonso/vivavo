@@ -40,6 +40,12 @@ class PageController extends Controller
         return view('web.event', compact('event'));
     }
 
+    public function booking($slug) {
+
+        $event = Event::where('slug', $slug)->first();
+
+        return view('web.booking', compact('event'));
+    }
 
     public function category($slug) {
         $category = Category::where('slug',$slug)->pluck('id')->first();

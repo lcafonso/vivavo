@@ -14,6 +14,10 @@
 				@if($event->file)
 				<img src="{{ $event->file }}" class="card-img-top" alt="">
 				@endif
+				<hr>
+				<p class="card-text ">Minimo e Maximos Convidados: <b>{{ $event->min_guests }} - {{ $event->max_guests }}</b> </p>
+				<p class="card-text ">Valor : <b>{{ $event->amount }}</b> </p>
+				<hr>
 				<p class="card-text">{{ $event->excerpt }}</p>
 				<hr>
 				{!! $event->body !!}
@@ -27,7 +31,7 @@
 				   	<hr>
 				@endforeach
 				<a href="/events" class="float-left">Voltar a lista</a>
-				<a href="#" class="float-right">Participar no evento</a>
+				<a href="{{ route('booking', $event->slug) }}" class="float-right">Participar no evento</a>
 			</div>
 		</div>	
 	</div>

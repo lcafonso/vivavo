@@ -29,6 +29,10 @@ class CreateEventsTable extends Migration
 
             $table->string('file')->nullable();
 
+            $table->unsignedDecimal('amount',8,2)->nullable();
+            $table->integer('min_guests')->unsigned()->nullable();
+            $table->integer('max_guests')->unsigned()->nullable();
+
             $table->timestamps();
 
             //Ralation

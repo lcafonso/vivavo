@@ -98,6 +98,9 @@
                 <div class="row">
                     <div class="col">
                         <div class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert">
+                                &times;
+                            </button>
                             {{ session('info') }}
                         </div>
                     </div>
