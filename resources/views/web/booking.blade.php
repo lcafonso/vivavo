@@ -82,7 +82,7 @@
 			 
 			        <!-- Radio Buttons -->
 			        <div class="form-group">
-		                {!! Form::label('checkbox', 'Termos de utilização', ['class' => 'col-lg-2 control-label']) !!}
+		                {!! Form::button('Termos de utilização' ,['class' => 'col-lg-2 control-label']) !!}
 						<div class="col">
 		                    {!! Form::checkbox('checkbox') !!}
 		                    <span class="help-block">Concordo com os termos para utilização deste serviço.</span>

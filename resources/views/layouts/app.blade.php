@@ -10,44 +10,52 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+
     <!-- Scripts 
     <script src="{{ asset('js/app.js') }}" defer></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
-
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.min.css" rel="stylesheet">   
 </head>
+
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+
+    <!--Main Navigation-->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Viv@vo') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect" href="{{ url('/') }}" >
+                    <strong class="blue-text">{{ config('app.name', 'Viv@vo') }}</strong>
+                </a> 
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- Links -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li><a class="nav-link" href="{{ route('news') }}">Noticias</a></li>
-                        <li><a class="nav-link" href="{{ route('events') }}">Eventos</a></li>
+                        <li><a class="nav-link waves-effect" href="{{ route('news') }}"  >Noticias</a></li>
+                        <li><a class="nav-link waves-effect" href="{{ route('events') }}"  >Eventos</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                            <li><a class="nav-link waves-effect" href="{{ route('login') }}"  >{{ __('Login') }}</a></li>
+                            <li><a class="nav-link waves-effect" href="{{ route('register') }}"  >{{ __('Register') }}</a></li>
                         @else
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -86,11 +94,17 @@
                                 </div>
                             </li>
                         @endguest
+
                     </ul>
                 </div>
             </div>
         </nav>
-        
+        <!-- Navbar -->
+    </header>
+    <!--Main Navigation-->
+
+    <div id="app">
+
 
         <main class="py-4">
             @if(session('info'))
@@ -126,17 +140,66 @@
             </div>
             @endif
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-
-
-            @yield('content')
+           
         </main>
+
+        <!-- Content -->
+        @yield('content')
+
     </div>
 
-    
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+        <hr class="my-4">
+
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="https://www.facebook.com/" target="_blank">
+                <i class="fa fa-facebook mr-3"></i>
+            </a>
+
+            <a href="https://twitter.com/" target="_blank">
+                <i class="fa fa-twitter mr-3"></i>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank">
+                <i class="fa fa-youtube mr-3"></i>
+            </a>
+
+            <a href="https://plus.google.com/" target="_blank">
+                <i class="fa fa-google-plus mr-3"></i>
+            </a>
+
+        </div>
+        <!-- Social icons -->
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2018 Copyright:
+            <a href="http://www.ipb.pt/~vivavo/" target="_blank"> Projeto Viv@vó </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+    <!-- SCRIPTS -->
     @yield('scripts')   
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+    </script>
+
 </body>
 </html>

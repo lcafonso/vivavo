@@ -12,10 +12,11 @@ use App\CAtegory;
 
 class PageController extends Controller
 {
+
    
     public function news() {
 
-    	$posts = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
+    	$posts = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(5);
 
     	return view('web.posts', compact('posts'));
     }

@@ -13,6 +13,7 @@
 
 Route::redirect('/', 'news' );
 
+
 Auth::routes();
 
 //web
@@ -34,3 +35,8 @@ Route::resource('posts', 'Admin\PostController');
 
 //mail
 Route::get('send', 'Web\MailController@send')->name('send');
+
+//terms
+Route::get('terms', function () {
+    return view('web.partials.terms');
+});
