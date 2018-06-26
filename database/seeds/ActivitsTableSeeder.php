@@ -33,7 +33,28 @@ class ActivitsTableSeeder extends Seeder
             'name' => 'Jantar na cozinha regional da Avó',
             'slug' => str_slug('Jantar na cozinha regional da Avó'),
             'body' => 'Jantar na cozinha regional da Avó',
-        ]);   
+        ]);
+
+        App\Activit::create([
+            'name' => 'Concentração dos visitantes no centro da aldeia',
+            'slug' => str_slug('Concentração dos visitantes no centro da aldeia'),
+            'body' => 'Concentração dos visitantes no centro da aldeia',
+        ]); 
+        App\Activit::create([
+            'name' => 'Acompanhamento dos habitantes no cantar dos reis',
+            'slug' => str_slug('Acompanhamento dos habitantes no cantar dos reis'),
+            'body' => 'Acompanhamento dos habitantes no cantar dos reis',
+        ]); 
+        App\Activit::create([
+            'name' => 'Jantar na Antiga escola primaria da aldeia',
+            'slug' => str_slug('Jantar na Antiga escola primaria da aldeia'),
+            'body' => 'Ementa: Entradas - Produtos regionais (Chouriça, Aleiras, Bola); Jantar - Colves guizadas com frando; Sobremesa: Bolo de maça e nozes, Bolo de sertã, Aletria, Pudim el mandarim, Pudim De Ovos, Filhos de Maça, Bolo de Iorgute',
+        ]); 
+        App\Activit::create([
+            'name' => 'Teatro popular',
+            'slug' => str_slug('Teatro popular'),
+            'body' => 'Animação realizada pelos habitantes da aldeia',
+        ]);    
 
     }
 

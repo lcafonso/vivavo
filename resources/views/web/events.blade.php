@@ -26,8 +26,8 @@
                 <div class="col-lg-5 col-xl-4 mb-4">
                     <!--Featured image-->
                     <div class="view overlay rounded z-depth-1">
-                    	@if($event->file)
-                        <img src="{{ $event->file }}" class="img-fluid" alt="">
+                    	@if($event->file1)
+                        <img src="{{ $event->file1 }}" class="img-fluid" alt="">
                         @else
                         <img src="http://www.ipb.pt/~vivavo/public/uploads/no_image_available.png" class="img-fluid" alt="no image available in post">
                         @endif

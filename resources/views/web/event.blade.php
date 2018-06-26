@@ -11,8 +11,8 @@
 				<p class="card-text">Responsável: <b>{{ $event->grandma->name }}</b> </p>
 			</div>
 			<div class="card-body">
-				@if($event->file)
-				<img src="{{ $event->file }}" class="card-img-top" alt="">
+				@if($event->file1)
+				<img src="{{ $event->file1 }}" class="card-img-top" alt="">
 				@endif
 				<hr>
 				<p class="card-text ">Mínimo e Máximos Convidados: <b>{{ $event->min_guests }} - {{ $event->max_guests }}</b> </p>

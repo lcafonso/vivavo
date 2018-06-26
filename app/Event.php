@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
 	protected $fillable = [
-		'grandma_id', 'name', 'slug', 'data_time', 'local', 'excerpt', 'body', 'file'
+		'grandma_id', 'name', 'slug', 'data_time', 'local', 'excerpt', 'body', 'file1', 'file2', 'file3', 'file4', 'file5', 'status'
 	];
 
 	public  function grandma()
