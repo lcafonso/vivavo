@@ -131,3 +131,7 @@
 <!--Main layout-->
 
 @endsection
+
+@section('scripts')
+
+@endsection
