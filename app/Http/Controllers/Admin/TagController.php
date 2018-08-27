@@ -50,6 +50,8 @@ class TagController extends Controller
      */
     public function store(TagStoreRequest $request)
     {
+
+        // Validar
         $tag = Tag::create($request->all());
 
         return redirect()->route('tags.edit', $tag->id)
@@ -92,12 +94,12 @@ class TagController extends Controller
     public function update(TagUpdateRequest $request, $id)
     {
         $tag = Tag::find($id);
-
+        //Validar
         $tag->fill($request->all())->save();
 
         return redirect()->route('tags.edit', $tag->id)
             ->with('info', 'Etiqueta atualizada com sucesso!');
-    
+
     }
 
     /**
@@ -111,6 +113,6 @@ class TagController extends Controller
         $tag = Tag::find($id)->delete();
 
         return back()->with('info', 'Etiqueta eliminada!');
-    
+
     }
 }
