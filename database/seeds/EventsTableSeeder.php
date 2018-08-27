@@ -37,7 +37,7 @@ class EventsTableSeeder extends Seeder
             'file2' => 'http://www.ipb.pt/~vivavo/public/uploads/patri1_vila.png',
             'file3' => 'http://www.ipb.pt/~vivavo/public/uploads/patri2_vila.png',
             'file4' => 'http://www.ipb.pt/~vivavo/public/uploads/patri3_vila.png',
-            'file4' => 'http://www.ipb.pt/~vivavo/public/uploads/patri4_vila.png',
+            'file5' => 'http://www.ipb.pt/~vivavo/public/uploads/patri4_vila.png',
 
             'body' => 'Ementa:
                 Entradas: Folar, Pão Centeio e Bolinha de Manteiga;
@@ -84,7 +84,7 @@ class EventsTableSeeder extends Seeder
             'file2' => 'http://www.ipb.pt/~vivavo/public/uploads/teatro1_agro.png',
             'file3' => 'http://www.ipb.pt/~vivavo/public/uploads/teatro2_agro.png',
             'file4' => 'http://www.ipb.pt/~vivavo/public/uploads/teatro3_agro.png',
-            'file4' => 'http://www.ipb.pt/~vivavo/public/uploads/teatro4_agro.png',
+            'file5' => 'http://www.ipb.pt/~vivavo/public/uploads/teatro4_agro.png',
 
             'body' => 'O Cantar os Reis é uma prática poético-musical, realizada em coletivo, em espaços públicos e privados que ainda se celebra na aldeia de Agrochão, Vinhais. Esta manifestação celebrada na aldeia implica a participação de vários residentes. O ritual começa pela constituição dos grupos que anualmente se reúnem na tarde do dia 6 de janeiro sob a organização da Dona Maria da Graça. Os membros do grupo juntam-se no local habitual (Igreja de São Mamede) e o número de participantes varia de ano para ano. Sem ensaios ou combinações elaboradas, o grupo encontra-se de forma espontânea e rapidamente define as funções de cada um. Depois partem pelas arruadas, deslocando-se às casas e lá soltam o canto. Conhecedora do ritual, a Dona Maria da Graça é usualmente o elemento que assume o papel de porta-voz do grupo e tem a responsabilidade de manter viva a tradição transmitindo-a às novas gerações.',
 

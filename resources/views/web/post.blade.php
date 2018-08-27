@@ -7,7 +7,7 @@
     	<!--Section: Post-->
         <section class="mt-4">
 
-			
+
  			<!--Featured Image-->
 			<div class="card mb-4 wow fadeIn">
 				@if($post->file)
@@ -16,7 +16,7 @@
 				<img src="http://www.ipb.pt/~vivavo/public/uploads/no_image_available.png" class="img-fluid" alt="no image available in post">
 				@endif
 			</div>
-			<!--/.Featured Image--> 
+			<!--/.Featured Image-->
 
 			<!--Card-->
 			<div class="card mb-4 wow fadeIn">
@@ -33,10 +33,10 @@
 
 					{!! $post->body !!}
 					<hr>
-
+          <p>Keywords:
 					@foreach($post->tags as $tag)
 					<a href="{{ route('tag', $tag->slug) }}">
-						{{ $tag->name }}
+						{{ $tag->name }}; 
 					</a>
 					@endforeach
 
@@ -44,7 +44,7 @@
 				</div>
 			</div>
 			<!--/.Card-->
- 
+
         </section>
         <!--Section: Post-->
 	</div>

@@ -22,6 +22,8 @@ class CreateLocalsTable extends Migration
             $table->string('slug')->unique();
             $table->mediumText('body')->nullable();
 
+            $table->string('file')->nullable();
+            
             $table->timestamps();
 
             //Relations

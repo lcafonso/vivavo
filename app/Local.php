@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Local extends Model
 {
 	protected $fillable = [
-		'district_id','name', 'slug', 'body'
+		'district_id','name', 'slug', 'body','file'
 	];
 
 	public  function poi()
