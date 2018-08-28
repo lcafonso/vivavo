@@ -22,7 +22,7 @@ class PostsTableSeeder extends Seeder
 
 
         App\Post::create([
-            'user_id'  => 1,
+            'user_id'  => 10,
             'category_id' => 3,
             'name' => 'Público',
             'slug' => str_slug('Público'),
@@ -41,7 +41,7 @@ Aceda em http://p3.publico.pt/actualidade/educacao/25286/vamos-visitar-casas-das
         });
 
         App\Post::create([
-            'user_id'  => 1,
+            'user_id'  => 10,
             'category_id' => 3,
             'name' => 'TSF',
             'slug' => str_slug('TSF'),
@@ -60,7 +60,7 @@ Aceda em https://www.tsf.pt/lusa/interior/politecnico-de-braganca-quer-levar-tur
         });
 
         App\Post::create([
-            'user_id'  => 1,
+            'user_id'  => 10,
             'category_id' => 3,
             'name' => 'Diário de Notícias',
             'slug' => str_slug('Diário de Notícias'),
@@ -80,7 +80,7 @@ Aceda em https://www.dn.pt/lusa/interior/politecnico-de-braganca-quer-levar-turi
         });
 
         App\Post::create([
-            'user_id'  => 1,
+            'user_id'  => 10,
             'category_id' => 3,
             'name' => 'Diário de Trás-os-Montes',
             'slug' => str_slug('Diário de Trás-os-Montes'),
@@ -101,7 +101,7 @@ Aceda em http://www.diariodetrasosmontes.com/noticia/politecnico-de-braganca-que
 
 
         App\Post::create([
-            'user_id'  => 1,
+            'user_id'  => 10,
             'category_id' => 3,
             'name' => 'Agora Nós (RTP1)',
             'slug' => str_slug('Agora Nós (RTP1)'),
@@ -119,7 +119,7 @@ Vejam o que as nossas Avós têm a dizer através do link https://www.rtp.pt/pla
         });
 
         App\Post::create([
-            'user_id'  => 1,
+            'user_id'  => 10,
             'category_id' => 1,
             'name' => 'Gastronomia Local',
             'slug' => str_slug('Gastronomia Local'),

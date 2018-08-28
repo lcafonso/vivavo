@@ -14,8 +14,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
 
-    <!-- Scripts 
+    <!-- Scripts
     <script src="{{ asset('js/app.js') }}" defer></script>-->
+    
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,7 +25,20 @@
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
-    <link href="css/style.min.css" rel="stylesheet">   
+    <link href="css/style.min.css" rel="stylesheet">
+
+    <style>
+
+      #app{
+
+        padding-top: 60px;
+
+      }
+
+    </style>
+
+
+
 </head>
 
 <body>
@@ -37,7 +51,7 @@
                 <!-- Brand -->
                 <a class="navbar-brand waves-effect" href="{{ url('/') }}" >
                     <strong class="blue-text">{{ config('app.name', 'Viv@vo') }}</strong>
-                </a> 
+                </a>
 
                 <!-- Collapse -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -84,17 +98,21 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
+
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
+
                             </li>
                         @endguest
 
@@ -135,7 +153,7 @@
                                 <li>
                                     {{ $error }}
                                 </li>
-                                @endforeach        
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -143,7 +161,7 @@
             </div>
             @endif
 
-           
+
         </main>
 
         <!-- Content -->
@@ -187,7 +205,7 @@
     </footer>
     <!--/.Footer-->
     <!-- SCRIPTS -->
-    @yield('scripts')   
+    @yield('scripts')
 
 
     <!-- JQuery -->

@@ -11,7 +11,7 @@
 				</div>
 				<div class="card-body">
 					<p><strong>Nome</strong> {{ $tag->name }} </p>
-					<p><strong>Slug</strong> {{ $tag->slug }} </p>
+					<p><strong>URL Amigavel</strong> {{ $tag->slug }} </p>
 				</div>
 			</div>
 		</div>
