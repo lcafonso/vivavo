@@ -32,7 +32,14 @@ Route::resource('guests', 'Web\GuestController');
 Route::resource('tags', 'Admin\TagController');
 Route::resource('categories', 'Admin\CategoryController');
 Route::resource('posts', 'Admin\PostController');
-
+Route::resource('activities', 'Admin\ActivitController');
+Route::resource('locals', 'Admin\LocalController');
+Route::resource('districts', 'Admin\DistrictController');
+Route::resource('posts', 'Admin\PostController');
+Route::resource('pois', 'Admin\PoiController');
+Route::resource('users', 'Admin\UserController');
+Route::resource('grandmas', 'Admin\GrandmaController');
+Route::resource('ocasions', 'Admin\OcasionController');
 
 //mail
 Route::get('send', 'Web\MailController@send')->name('send');

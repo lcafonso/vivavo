@@ -16,7 +16,7 @@
 
     <!-- Scripts
     <script src="{{ asset('js/app.js') }}" defer></script>-->
-    
+
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -81,16 +81,16 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('tags.index') }}">Etiquetas</a>
                                     <a class="dropdown-item" href="{{ route('categories.index') }}">Categorias</a>
-                                    <a class="dropdown-item" href="#">Atividades</a>
-                                    <a class="dropdown-item" href="#">Locais</a>
-                                    <a class="dropdown-item" href="#">Distritos</a>
-                                    <a class="dropdown-item" href="#">Pontos de Interesse</a>
+                                    <a class="dropdown-item" href="{{ route('activities.index') }}">Atividades</a>
+                                    <a class="dropdown-item" href="{{ route('locals.index') }}">Locais</a>
+                                    <a class="dropdown-item" href="{{ route('districts.index') }}">Distritos</a>
+                                    <a class="dropdown-item" href="{{ route('pois.index') }}">Pontos de Interesse</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Utilizadores</a>
-                                    <a class="dropdown-item" href="#">Intervinientes (avós)</a>
+                                    <a class="dropdown-item" href="{{ route('users.index') }}">Utilizadores</a>
+                                    <a class="dropdown-item" href="{{ route('grandmas.index') }}">Intervinientes (avós)</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('posts.index') }}">Noticias</a>
-                                    <a class="dropdown-item" href="#">Eventos</a>
+                                    <a class="dropdown-item" href="{{ route('ocasions.index') }}">Eventos</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">

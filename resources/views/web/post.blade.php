@@ -13,7 +13,7 @@
 				@if($post->file)
 			    <img src="{{ $post->file }}" class="img-fluid" alt="">
 				@else
-				<img src="http://www.ipb.pt/~vivavo/public/uploads/no_image_available.png" class="img-fluid" alt="no image available in post">
+				  <img src="http://www.ipb.pt/~vivavo/public/uploads/no_image_available.png" class="img-fluid" alt="no image available in post">
 				@endif
 			</div>
 			<!--/.Featured Image-->
@@ -36,7 +36,7 @@
           <p>Keywords:
 					@foreach($post->tags as $tag)
 					<a href="{{ route('tag', $tag->slug) }}">
-						{{ $tag->name }}; 
+						{{ $tag->name }};
 					</a>
 					@endforeach
 

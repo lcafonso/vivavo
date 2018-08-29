@@ -22,7 +22,7 @@
 		{{ Form::radio('status', 'PUBLISHED') }} Publicado
 	</label>
 	<label>
-		{{ Form::radio('status', 'DRAF') }} Rascunho
+		{{ Form::radio('status', 'DRAFT') }} Rascunho
 	</label>
 </div>
 <div class="form-group">
