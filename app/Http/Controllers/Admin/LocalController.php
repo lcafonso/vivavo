@@ -8,6 +8,7 @@ use App\Http\Requests\LocalUpdateRequest;
 use App\Http\Controllers\Controller;
 
 use App\Local;
+use App\District;
 
 class LocalController extends Controller
 {
@@ -39,7 +40,11 @@ class LocalController extends Controller
      */
     public function create()
     {
-        return view('admin.locals.create');
+
+        $districts = District::orderBy('name', 'ASC')->pluck('name','id');
+
+
+        return view('admin.locals.create', compact('districts'));
     }
 
     /**
@@ -80,8 +85,9 @@ class LocalController extends Controller
     public function edit($id)
     {
         $local = Local::find($id);
+        $districts = District::orderBy('name', 'ASC')->pluck('name','id');
 
-        return view('admin.locals.edit', compact('local'));
+        return view('admin.locals.edit', compact('local','districts'));
     }
 
     /**

@@ -8,6 +8,7 @@ use App\Http\Requests\PoiUpdateRequest;
 use App\Http\Controllers\Controller;
 
 use App\Poi;
+use App\Local;
 
 class PoiController extends Controller
 {
@@ -39,7 +40,9 @@ class PoiController extends Controller
      */
     public function create()
     {
-        return view('admin.pois.create');
+        $locals = Local::orderBy('name', 'ASC')->pluck('name','id');
+
+        return view('admin.pois.create', compact('locals'));
     }
 
     /**
@@ -80,8 +83,9 @@ class PoiController extends Controller
     public function edit($id)
     {
         $poi = Poi::find($id);
+        $locals = Local::orderBy('name', 'ASC')->pluck('name','id');
 
-        return view('admin.pois.edit', compact('poi'));
+        return view('admin.pois.edit', compact('poi', 'locals'));
     }
 
     /**

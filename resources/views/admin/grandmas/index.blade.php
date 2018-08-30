@@ -7,8 +7,8 @@
 		<div class="col">
 			<div class="card">
 				<div class="card-header">
-					Lista de Etiquetas
-					<a href="{{ route('tags.create') }}" class="btn btn-sm btn-primary float-right">
+					Lista de Avós
+					<a href="{{ route('grandmas.create') }}" class="btn btn-sm btn-primary float-right">
 						Criar
 					</a>
 				</div>
@@ -22,22 +22,22 @@
 							</tr>
 						</thead>
 						<tbody>
-							@foreach($tags as $tag)
+							@foreach($grandmas as $grandma)
 							<tr>
-								<td>{{ $tag->id }}</td>
-								<td>{{ $tag->name }}</td>
+								<td>{{ $grandma->id }}</td>
+								<td>{{ $grandma->name }}</td>
 								<td width="10px">
-									<a href="{{ route('tags.show', $tag->id) }}" class="btn btn-sm btn-secondary">
+									<a href="{{ route('grandmas.show', $grandma->id) }}" class="btn btn-sm btn-secondary">
 										ver
 									</a>
 								</td>
 								<td width="10px">
-									<a href="{{ route('tags.edit', $tag->id) }}" class="btn btn-sm btn-secondary">
+									<a href="{{ route('grandmas.edit', $grandma->id) }}" class="btn btn-sm btn-secondary">
 										editar
 									</a>
 								</td>
 								<td width="10px">
-									{!! Form::open(['route' => ['tags.destroy', $tag->id], 'method' => 'DELETE']) !!}
+									{!! Form::open(['route' => ['grandmas.destroy', $grandma->id], 'method' => 'DELETE']) !!}
 										<button class="btn btn-sm btn-danger">
 											apagar
 										</button>
@@ -47,7 +47,7 @@
 							@endforeach
 						</tbody>
 					</table>
-					{{ $tags->render() }}
+					{{ $grandmas->render() }}
 				</div>
 			</div>
 		</div>

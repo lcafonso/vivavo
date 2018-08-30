@@ -7,8 +7,8 @@
 		<div class="col">
 			<div class="card">
 				<div class="card-header">
-					Lista de Etiquetas
-					<a href="{{ route('tags.create') }}" class="btn btn-sm btn-primary float-right">
+					Lista de Actividades
+					<a href="{{ route('activities.create') }}" class="btn btn-sm btn-primary float-right">
 						Criar
 					</a>
 				</div>
@@ -22,22 +22,22 @@
 							</tr>
 						</thead>
 						<tbody>
-							@foreach($tags as $tag)
+							@foreach($activities as $activit)
 							<tr>
-								<td>{{ $tag->id }}</td>
-								<td>{{ $tag->name }}</td>
+								<td>{{ $activit->id }}</td>
+								<td>{{ $activit->name }}</td>
 								<td width="10px">
-									<a href="{{ route('tags.show', $tag->id) }}" class="btn btn-sm btn-secondary">
+									<a href="{{ route('activities.show', $activit->id) }}" class="btn btn-sm btn-secondary">
 										ver
 									</a>
 								</td>
 								<td width="10px">
-									<a href="{{ route('tags.edit', $tag->id) }}" class="btn btn-sm btn-secondary">
+									<a href="{{ route('activities.edit', $activit->id) }}" class="btn btn-sm btn-secondary">
 										editar
 									</a>
 								</td>
 								<td width="10px">
-									{!! Form::open(['route' => ['tags.destroy', $tag->id], 'method' => 'DELETE']) !!}
+									{!! Form::open(['route' => ['activities.destroy', $activit->id], 'method' => 'DELETE']) !!}
 										<button class="btn btn-sm btn-danger">
 											apagar
 										</button>
@@ -47,7 +47,7 @@
 							@endforeach
 						</tbody>
 					</table>
-					{{ $tags->render() }}
+					{{ $activities->render() }}
 				</div>
 			</div>
 		</div>

@@ -3,10 +3,24 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\GrandmaStoreRequest;
+use App\Http\Requests\GrandmaUpdateRequest;
 use App\Http\Controllers\Controller;
 
-class ActorController extends Controller
+use App\Grandma;
+use App\Local;
+
+class GrandmaController extends Controller
 {
+
+    /**
+     * Validação de segurança
+     */
+    public  function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +28,9 @@ class ActorController extends Controller
      */
     public function index()
     {
-        //
+        $grandmas = Grandma::orderBy('id','DESC')->paginate();
+
+        return view('admin.grandmas.index', compact('grandmas'));
     }
 
     /**
@@ -24,7 +40,9 @@ class ActorController extends Controller
      */
     public function create()
     {
-        //
+        $locals = Local::orderBy('name', 'ASC')->pluck('name', 'id');
+
+        return view('admin.grandmas.create', compact('locals'));
     }
 
     /**
@@ -33,9 +51,14 @@ class ActorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GrandmaStoreRequest $request)
     {
-        //
+
+        // Validar
+        $grandma = Grandma::create($request->all());
+
+        return redirect()->route('grandmas.edit', $grandma->id)
+            ->with('info', 'Dados guardados com sucesso!');
     }
 
     /**
@@ -46,7 +69,9 @@ class ActorController extends Controller
      */
     public function show($id)
     {
-        //
+        $grandma = Grandma::find($id);
+
+        return view('admin.grandmas.show', compact('grandma'));
     }
 
     /**
@@ -57,7 +82,10 @@ class ActorController extends Controller
      */
     public function edit($id)
     {
-        //
+        $grandma = Grandma::find($id);
+        $locals = Local::orderBy('name', 'ASC')->pluck('name', 'id');
+
+        return view('admin.grandmas.edit', compact('grandma', 'locals'));
     }
 
     /**
@@ -67,9 +95,15 @@ class ActorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(GrandmaUpdateRequest $request, $id)
     {
-        //
+        $grandma = Grandma::find($id);
+        //Validar
+        $grandma->fill($request->all())->save();
+
+        return redirect()->route('grandmas.edit', $grandma->id)
+            ->with('info', 'Dados atualizados com sucesso!');
+
     }
 
     /**
@@ -80,6 +114,9 @@ class ActorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $grandma = Grandma::find($id)->delete();
+
+        return back()->with('info', 'Dados eliminados!');
+
     }
 }
