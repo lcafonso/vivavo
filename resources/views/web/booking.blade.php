@@ -9,7 +9,7 @@
 			<!-- @include('web.partials.info') -->
 
 			{!! Form::open(['route' => 'guests.store',  $event->id]) !!}
-		 
+
 		    <legend>Participar no evento</legend>
 	        <h1>{{ $event->name }}</h1>
 			<div class="card">
@@ -28,7 +28,7 @@
 			                {!! Form::text('name', $value = null, ['class' => 'form-control', 'placeholder' => 'nome']) !!}
 			            </div>
 			        </div>
-			 
+
 			        <!-- Surname -->
 			        <div class="form-group">
 			            {!! Form::label('surname', 'Sobrenome:', ['class' => 'col-lg-2 control-label']) !!}
@@ -44,8 +44,8 @@
 			                {!! Form::email('email', $value = null, ['class' => 'form-control', 'placeholder' => 'email']) !!}
 			            </div>
 			        </div>
-			 
-			        <!-- Password 
+
+			        <!-- Password
 			        <div class="form-group">
 			            {!! Form::label('password', 'Password:', ['class' => 'col-lg-2 control-label']) !!}
 			            <div class="col">
@@ -61,7 +61,7 @@
 			                <span class="help-block">Numero de pessoas adultas.</span>
 			            </div>
 			        </div>
-			            
+
 					<!-- Select With One Default -->
 			        <div class="form-group">
 			            <div class="col">
@@ -70,7 +70,7 @@
 			            </div>
 			        </div>
 
-			 
+
 			        <!-- Text Area -->
 			        <div class="form-group">
 			            {!! Form::label('textarea', 'Comentario', ['class' => 'col-lg-2 control-label']) !!}
@@ -79,16 +79,16 @@
 			                <span class="help-block">Pode deixarnos algum comentario.</span>
 			            </div>
 			        </div>
-			 
+
 			        <!-- Radio Buttons -->
 			        <div class="form-group">
-		                {!! Form::button('Termos de utilização' ,['class' => 'col-lg-2 control-label']) !!}
-						<div class="col">
+								  {!! Form::label('textarea', 'Aceitar os termos', ['class' => 'col-lg-2 control-label']) !!}
+						  		<div class="col">
 		                    {!! Form::checkbox('checkbox') !!}
-		                    <span class="help-block">Concordo com os termos para utilização deste serviço.</span>
-			            </div>  
+		                    <span class="help-block"> Concordo com os {!! link_to('terms', $title = 'Termos de Utilização', $parameters = [], $attributes = []); !!} deste serviço.</span>
+			            </div>
 			        </div>
-			 
+
 
 			        <!-- Submit Button -->
 			        <div class="form-group">
@@ -101,8 +101,8 @@
 
 
 	        </div>
-		 
-		 
+
+
 		    {!! Form::close()  !!}
 
 		</div>

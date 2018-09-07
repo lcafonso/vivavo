@@ -12,12 +12,13 @@
 |
 */
 
-Route::redirect('/', 'news' );
+Route::redirect('/', 'home' );
 
 
 Auth::routes();
 
 //web
+Route::get('home', 'HomeController@index')->name('home');
 Route::get('news', 'Web\PageController@news')->name('news');
 Route::get('news/{slug}', 'Web\PageController@post')->name('post');
 Route::get('events', 'Web\PageController@events')->name('events');
@@ -25,6 +26,7 @@ Route::get('events/{slug}', 'Web\PageController@event')->name('event');
 Route::get('booking/{slug}', 'Web\PageController@booking')->name('booking');
 Route::get('category/{slug}', 'Web\PageController@category')->name('category');
 Route::get('tag/{slug}', 'Web\PageController@tag')->name('tag');
+Route::get('term', 'Web\PageController@term')->name('term');
 
 Route::resource('guests', 'Web\GuestController');
 

@@ -16,14 +16,12 @@ class CreateGuestsTable extends Migration
         Schema::create('guests', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('event_id')->unsigned();
-            
             $table->string('name');
             $table->string('surname');
 
             $table->string('email');
             //$table->string('password');
-            
+
             $table->mediumText('comment')->nullable();
 
             $table->integer('num_adults')->unsigned()->nullable();
@@ -31,10 +29,6 @@ class CreateGuestsTable extends Migration
 
             $table->timestamps();
 
-            //Ralation
-            $table->foreign('event_id')->references('id')->on('events')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
         });
     }
 

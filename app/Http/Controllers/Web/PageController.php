@@ -64,4 +64,9 @@ class PageController extends Controller
 
     }
 
+    public function term() {
+
+      return view('web.term');
+    }
+
 }
