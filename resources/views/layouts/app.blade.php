@@ -37,7 +37,7 @@
 
     </style>
 
-
+    @yield('customStyle')
 
 </head>
 
@@ -90,7 +90,7 @@
                                     <a class="dropdown-item" href="{{ route('grandmas.index') }}">Intervinientes (avós)</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('posts.index') }}">Noticias</a>
-                                    <a class="dropdown-item" href="{{ route('ocasions.index') }}">Eventos</a>
+                                    <a class="dropdown-item" href="{{ route('event.index') }}">Eventos</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -204,9 +204,6 @@
 
     </footer>
     <!--/.Footer-->
-    <!-- SCRIPTS -->
-    @yield('scripts')
-
 
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -221,6 +218,9 @@
         // Animations initialization
         new WOW().init();
     </script>
+
+    <!-- SCRIPTS -->
+    @yield('scripts')
 
 </body>
 </html>
