@@ -25,7 +25,7 @@ class ActivitUpdateRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'slug' => 'required|unique:activities,slug,' . $this->activit,
+            'slug' => 'required|unique:activits,slug,' . $this->activit,
         ];
     }
 }

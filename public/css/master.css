@@ -1,0 +1,217 @@
+
+
+.slogan {
+  background-color: #f0f0f0;
+  padding: 10px;
+  clear: both;
+  text-align: left;
+}
+
+.slogan img{
+  width: auto;
+  height: 3em;
+  padding: 0;
+  position: relative;
+}
+
+
+
+.logo {
+  width: auto;
+  height: 10vh;
+  padding: 0;
+  position: relative;
+  z-index:1000;
+}
+
+
+.separador {
+  padding: 0.2rem 0.2rem;
+}
+
+
+/* Custon Footer */
+
+
+
+
+
+/* Custon NavBar */
+/* change the background color */
+.navbar-custom {
+    background-color: transparent;
+    padding: 0;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    padding: 0;
+    color: rgba(0,0,0,.8);
+}
+/* change the link color and add padding for height */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(0,0,0,.5);
+    height: 100%;
+    padding: 2rem 1rem;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+    background-color: #3a4953; /* add background-color to active links */
+}
+
+.navbar-custom li{
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.navbar-custom .ion{
+    color: rgba(0,0,0,.5);
+    background-color: transparent;
+}
+            
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 200px) {
+  /* Custon Navbar */
+  .logo {
+    width: auto;
+    height: 2vh;
+  }
+
+
+  .slogan img{
+    width: auto;
+    height: 1em;
+  }
+
+
+
+}
+
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+  /* Custon Navbar */
+  .logo {
+    width: auto;
+    height: 4vh;
+  }
+
+
+  .slogan img{
+    width: auto;
+    height: 1.5em;
+  }
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+  /* Custon Navbar */
+  .logo {
+    width: auto;
+    height: 6vh;
+  }
+
+
+  .slogan img{
+    width: auto;
+    height: 2em;
+  }
+
+  /* change the link color and add padding for height */
+  .navbar-custom .navbar-nav .nav-link {
+       padding: 2rem .5rem;
+  }
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  /* your mobile css, change this as you please */
+
+  /* Custon Navbar */
+  .logo {
+    width: auto;
+    height: 6vh;
+  }
+
+
+  .slogan img{
+    width: auto;
+    height: 2em;
+  }
+
+  /* change the link color and add padding for height */
+  .navbar-custom .navbar-nav .nav-link {
+      padding: 2rem .5rem;
+  }
+
+
+
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .logo {
+    width: auto;
+    height: 8vh;
+  }
+
+
+  .slogan img{
+    width: auto;
+    height: 2em;
+  }
+
+  /* change the link color and add padding for height */
+  .navbar-custom .navbar-nav .nav-link {
+      padding: 2rem 1rem;
+  }
+
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    /* your desktop css */
+  .logo {
+    width: auto;
+    height: 10vh;
+  }
+
+  .slogan img{
+    width: auto;
+    height: 2em;
+  }
+
+  /* change the link color and add padding for height */
+  .navbar-custom .navbar-nav .nav-link {
+      padding: 2rem 1rem;
+  }
+
+
+}

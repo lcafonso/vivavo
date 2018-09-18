@@ -33,6 +33,13 @@ class PageController extends Controller
     	return view('web.events', compact('events'));
     }
 
+    //Newspage
+    public function grandmaslist(){
+      $grandmas = Grandma::orderBy('id', 'DESC')->get();
+
+      return view('web.grandmaslist',compact('grandmas'));
+    }
+
     public function event($slug) {
 
         $event = Event::where('slug', $slug)->first();

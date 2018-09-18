@@ -1,0 +1,28 @@
+{
+	"items" : [
+		{
+			"img": "{{ url('img/IMG_8039.jpg') }}",
+			"alt" : "Owl Image 1"
+		},
+		{
+			"img": "{{ url('img/img_8625.jpg') }}",
+			"alt" : "Owl Image 2"
+		},
+		{
+			"img": "{{ url('img/IMG_8039.jpg') }}",
+			"alt" : "Owl Image 1"
+		},
+		{
+			"img": "{{ url('img/img_8625.jpg') }}",
+			"alt" : "Owl Image 2"
+		},
+		{
+			"img": "{{ url('img/IMG_8039.jpg') }}",
+			"alt" : "Owl Image 1"
+		},
+		{
+			"img": "{{ url('img/img_8625.jpg') }}",
+			"alt" : "Owl Image 2"
+		}
+	]
+}

@@ -21,6 +21,8 @@
 							<a class="nav-link" role="tab" data-toggle="tab" href="#descritivo" style="color: #353535;">Descritivo</a></li>
 				    <li class="nav-item">
 							<a class="nav-link" role="tab" data-toggle="tab" href="#atividades" style="color: #353535;">Actividades</a></li>
+						<li class="nav-item">
+							<a class="nav-link" role="tab" data-toggle="tab" href="#galeria" style="color: #353535;">Galeria</a></li>
 				  </ul>
 
 				</div>
@@ -37,6 +39,9 @@
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="atividades">
 							@include('admin.events.partials.form3')
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="galeria">
+							@include('admin.events.partials.form4')
 						</div>
 					</div>
 

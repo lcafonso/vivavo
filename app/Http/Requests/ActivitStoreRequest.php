@@ -25,7 +25,7 @@ class ActivitStoreRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'slug' => 'required|unique:activities,slug',
+            'slug' => 'required|unique:activits,slug',
         ];
     }
 }

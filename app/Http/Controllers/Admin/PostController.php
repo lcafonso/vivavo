@@ -46,7 +46,7 @@ class PostController extends Controller
     public function create()
     {
         $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
-        $tags = Tag::orderBy('name', 'ASC')->get();
+        $tags = Tag::orderBy('name', 'ASC');
 
         return view('admin.posts.create', compact('categories', 'tags'));
     }
