@@ -554,7 +554,8 @@
 
     <div class="container">
     <hr class="featurette-divider">
-    @foreach ($events as $k => $event)
+		<?php $reversed = $events->reverse(); ?>
+    @foreach ($reversed as $k => $event)
       @if ($k % 2 == 0)
           <div class="row featurette">
             <div class="col-md-7">
@@ -602,7 +603,7 @@
             </div>
           </div>
        @endif
-           
+
           <hr class="featurette-divider">
 
 
