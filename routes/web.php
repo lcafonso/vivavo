@@ -30,7 +30,6 @@ Route::get('term', 'Web\PageController@term')->name('term');
 Route::get('about', 'Web\PageController@about')->name('about');
 Route::get('contacts', 'Web\PageController@contacts')->name('contacts');
 
-
 Route::resource('guests', 'Web\GuestController');
 
 //admin

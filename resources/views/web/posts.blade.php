@@ -382,6 +382,7 @@
 
 @endsection
 
+@section('scripts')
 
 <!-- Java Section -->
 @section('javascript')

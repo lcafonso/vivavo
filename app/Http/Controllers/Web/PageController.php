@@ -71,6 +71,11 @@ class PageController extends Controller
 
     }
 
+    public function term() {
+
+      return view('web.term');
+    }
+
     public function about() {
 
       return view('web.about');
@@ -81,9 +86,6 @@ class PageController extends Controller
       return view('web.contacts');
     }
 
-    public function term() {
 
-      return view('web.term');
-    }
 
 }

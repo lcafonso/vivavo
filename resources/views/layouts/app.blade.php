@@ -204,7 +204,7 @@
             <ul class="nav navbar-nav ml-auto">
               <!-- Authentication Links -->
               @guest
-                <!-- <li class="nav-item"><a class="nav-link" href="{{ url('/') }}"><span class="ion ion-ios-cart"></span> </a></li> -->
+                <li class="nav-item"><a class="nav-link" href="{{ url('/') }}"><span class="ion ion-ios-cart"></span> </a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><span class="ion ion-ios-person"></span></a></li>
               @else
                  <li class="nav-item dropdown">
@@ -226,7 +226,7 @@
                          <a class="dropdown-item" href="{{ route('event.index') }}">Eventos</a>
                      </div>
                  </li>
-                 <!--<li class="nav-item"><a class="nav-link" href="{{ url('/') }}"><span class="ion ion-ios-cart"></span> </a></li>-->
+                 <li class="nav-item"><a class="nav-link" href="{{ url('/') }}"><span class="ion ion-ios-cart"></span> </a></li>
                  <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
