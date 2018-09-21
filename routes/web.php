@@ -27,9 +27,6 @@ Route::get('booking/{slug}', 'Web\PageController@booking')->name('booking');
 Route::get('category/{slug}', 'Web\PageController@category')->name('category');
 Route::get('tag/{slug}', 'Web\PageController@tag')->name('tag');
 Route::get('term', 'Web\PageController@term')->name('term');
-Route::get('about', 'Web\PageController@about')->name('about');
-Route::get('contacts', 'Web\PageController@contacts')->name('contacts');
-
 
 Route::resource('guests', 'Web\GuestController');
 
