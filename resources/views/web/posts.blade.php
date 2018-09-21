@@ -321,24 +321,30 @@
 
 	<div class="grid">
 
+    @foreach ($posts as $key => $post)
+
 		<!-- Item 1 -->
 		<div class="shadow grpelem grid-item" style="background-color: var(--bg-color-cloudy)" ><!-- column -->
 
 		    <div style="float:left; margin-top:-15px; width:100%;">
 		        <div class="view view-first"><!-- custom html -->
 
-		                 <img src="img/media/img_8784.jpg" class="cover50" />
-		                 <div class="mask">
-		                 <h2>Gastronomia e Tradições</h2>
-		                 <p>Gastronomia e Tradições</p>
+                    @if($post->file)
+                      <img src="{{ $post->file }}" class="cover50" alt="">
+                    @else
+                      <img src="img/no_image_available.png" class="cover50" alt="no image available in post">
+                    @endif
+
+	                 <div class="mask">
+		                 <h2>{{ $post->name }}</h2>
+		                 <p>{{ $post->excerpt }}</p>
 		                     <a href="#" class="info">Ler mais</a>
-		                 </div>
+	                 </div>
 		        </div>
 		        <div class="colelem uBox">
-		            <h5 class="colelem">01/11/2018</h5><!-- rasterized frame -->
-		            <h3 class="colelem">Gastronomia e Tradições</h3> <!-- rasterized frame -->
-		            <p class="colelem" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-		            </p><!-- rasterized frame -->
+		            <h5 class="colelem">{{ $post->created_at }}</h5><!-- rasterized frame -->
+		            <h3 class="colelem">{{ $post->name }}</h3> <!-- rasterized frame -->
+		            <p class="colelem" >{{ $post->excerpt }} </p>
 		        </div>
 		        <div class="colelem barra50" style="background-color: var(--bg-color-gallery)"><!-- simple frame --></div>
 
@@ -364,139 +370,11 @@
 		        </div>
 		    </div>
 		</div>
+    @endforeach
 
-		<!-- Item 3 -->
-		<div class="shadow grpelem grid-item" style="background-color: var(--bg-color-gallery)"><!-- column -->
-
-		    <div style="float:left; margin-top:-15px; width:100%;">
-		        <div class="view view-first"><!-- custom html -->
-
-		                 <img src="img/media/img_8784.jpg" class="cover50" />
-		                 <div class="mask">
-		                 <h2>Gastronomia e Tradições</h2>
-		                 <p>Gastronomia e Tradições</p>
-		                     <a href="#" class="info">Ler mais</a>
-		                 </div>
-		        </div>
-		        <div class="colelem uBox">
-		            <h5 class="colelem">01/11/2018</h5><!-- rasterized frame -->
-		            <h3 class="colelem">Gastronomia e Tradições</h3> <!-- rasterized frame -->
-		            <p class="colelem" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-		            </p><!-- rasterized frame -->
-		        </div>
-		        <div class="colelem barra50" style="background-color: var(--bg-color-gunsmoke)"><!-- simple frame --></div>
-
-		        <div class="colelem" style=" width:100%; margin-left:50%;"><!-- group -->
-
-		            <div class="grpelem hoverbtn" style="height: 50px;">
-                        <a href="#">
-                            <img src="img/facebookcor-u101-fr.png" />
-                        </a>
-                    </div> <!--facebook-->
-                    <div class="grpelem hoverbtn" style="height: 50px;">
-                        <a href="#">
-                            <img src="img/instagramcor-u100-fr.png" />
-                        </a>
-                    </div> <!--Instagr-->
-                    <div class="grpelem hoverbtn" style="height: 50px">
-                         <a href="#">
-                            <img src="img/youtubecor-u102-fr.png" />
-                        </a>
-                    </div> <!--youtube-->
-
-
-		        </div>
-		    </div>
-		</div>
-
-		<!-- Item 4 -->
-		<div class="shadow grpelem grid-item" style="background-color: var(--bg-color-stack)" ><!-- column -->
-
-		    <div style="float:left; margin-top:-15px; width:100%;">
-		        <div class="view view-first"><!-- custom html -->
-
-		                 <img src="img/media/img_8784.jpg" class="cover50" />
-		                 <div class="mask">
-		                 <h2>Gastronomia e Tradições</h2>
-		                 <p>Gastronomia e Tradições</p>
-		                     <a href="#" class="info">Ler mais</a>
-		                 </div>
-		        </div>
-		        <div class="colelem uBox">
-		            <h5 class="colelem">01/11/2018</h5><!-- rasterized frame -->
-		            <h3 class="colelem">Gastronomia e Tradições</h3> <!-- rasterized frame -->
-		            <p class="colelem" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-		            </p><!-- rasterized frame -->
-		        </div>
-		        <div class="colelem barra50" style="background-color: var(--bg-color-mineshaft)"><!-- simple frame --></div>
-
-		        <div class="colelem" style=" width:100%; margin-left:50%;"><!-- group -->
-
-		            <div class="grpelem hoverbtn" style="height: 50px;">
-                        <a href="#">
-                            <img src="img/facebookcor-u101-fr.png" />
-                        </a>
-                    </div> <!--facebook-->
-                    <div class="grpelem hoverbtn" style="height: 50px;">
-                        <a href="#">
-                            <img src="img/instagramcor-u100-fr.png" />
-                        </a>
-                    </div> <!--Instagr-->
-                    <div class="grpelem hoverbtn" style="height: 50px">
-                         <a href="#">
-                            <img src="img/youtubecor-u102-fr.png" />
-                        </a>
-                    </div> <!--youtube-->
-
-
-		        </div>
-		    </div>
-		</div>
-
-		<!-- Item 5 -->
-		<div class="shadow grpelem grid-item" style="background-color: var(--bg-color-lime-spruce)"><!-- column -->
-
-		    <div style="float:left; margin-top:-15px; width:100%;">
-		        <div class="view view-first"><!-- custom html -->
-
-		                 <img src="img/media/img_8784.jpg" class="cover50" />
-		                 <div class="mask">
-		                 <h2>Gastronomia e Tradições</h2>
-		                 <p>Gastronomia e Tradições</p>
-		                     <a href="#" class="info">Ler mais</a>
-		                 </div>
-		        </div>
-		        <div class="colelem uBox">
-		            <h5 class="colelem">01/11/2018</h5><!-- rasterized frame -->
-		            <h3 class="colelem">Gastronomia e Tradições</h3> <!-- rasterized frame -->
-		            <p class="colelem" >Lorem ipsum dolor sit amet, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-		            </p><!-- rasterized frame -->
-		        </div>
-		        <div class="colelem barra50" style="background-color: var(--bg-color-chestnut)"><!-- simple frame --></div>
-
-		        <div class="colelem" style=" width:100%; margin-left:50%;"><!-- group -->
-
-		            <div class="grpelem hoverbtn" style="height: 50px;">
-                        <a href="#">
-                            <img src="img/facebookcor-u101-fr.png" />
-                        </a>
-                    </div> <!--facebook-->
-                    <div class="grpelem hoverbtn" style="height: 50px;">
-                        <a href="#">
-                            <img src="img/instagramcor-u100-fr.png" />
-                        </a>
-                    </div> <!--Instagr-->
-                    <div class="grpelem hoverbtn" style="height: 50px">
-                         <a href="#">
-                            <img src="img/youtubecor-u102-fr.png" />
-                        </a>
-                    </div> <!--youtube-->
-
-
-		        </div>
-		    </div>
-		</div>
 	</div>
+  {{ $posts->render() }}
+
 </div>
 
 
