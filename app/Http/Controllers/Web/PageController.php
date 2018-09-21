@@ -71,6 +71,16 @@ class PageController extends Controller
 
     }
 
+    public function about() {
+
+      return view('web.about');
+    }
+
+    public function contacts() {
+
+      return view('web.contacts');
+    }
+
     public function term() {
 
       return view('web.term');
