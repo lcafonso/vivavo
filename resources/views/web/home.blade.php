@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 
 @section('customStyle')
@@ -383,7 +383,7 @@
 
 		<div class="container" style="padding: 0;">
 
-		  <!-- First News -->
+		    <!-- First News -->
 			<div class="browser_width colelem">
 			    <div class="shadow u94"><!-- group -->
 			        <div class="clearfix u94_align_to_page">
