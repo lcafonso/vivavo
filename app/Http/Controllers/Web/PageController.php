@@ -15,7 +15,7 @@ class PageController extends Controller
 
     public function news() {
 
-    	$posts = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(5);
+    	$posts = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(6);
 
     	return view('web.posts', compact('posts'));
     }

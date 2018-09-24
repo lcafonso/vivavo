@@ -324,7 +324,20 @@
     @foreach ($posts as $key => $post)
 
 		<!-- Item 1 -->
-		<div class="shadow grpelem grid-item" style="background-color: var(--bg-color-cloudy)" ><!-- column -->
+		@if($post->category_id == 1)
+			<div class="shadow grpelem grid-item" style="background-color: var(--bg-color-cloudy)" ><!-- column -->
+		@elseif($post->category_id == 2)
+			<div class="shadow grpelem grid-item" style="background-color: var(--bg-color-gunsmoke)" ><!-- column -->
+		@elseif($post->category_id == 3)
+			<div class="shadow grpelem grid-item" style="background-color: var(--bg-color-stack)" ><!-- column -->
+		@elseif($post->category_id == 4)
+			<div class="shadow grpelem grid-item" style="background-color: var(--bg-color-lime-spruce)" ><!-- column -->
+		@else($post->category_id > 4)
+			<div class="shadow grpelem grid-item" style="background-color: var(--bg-color-tussock)" ><!-- column -->
+		@endif
+
+
+
 
 		    <div style="float:left; margin-top:-15px; width:100%;">
 		        <div class="view view-first"><!-- custom html -->
@@ -346,7 +359,18 @@
 		            <h3 class="colelem">{{ $post->name }}</h3> <!-- rasterized frame -->
 		            <p class="colelem" >{{ $post->excerpt }} </p>
 		        </div>
-		        <div class="colelem barra50" style="background-color: var(--bg-color-gallery)"><!-- simple frame --></div>
+
+						@if($post->category_id == 1)
+		        	<div class="colelem barra50" style="background-color: var(--bg-color-tussock)"><!-- simple frame --></div>
+						@elseif($post->category_id == 2)
+							<div class="colelem barra50" style="background-color: var(--bg-color-gallery)"><!-- simple frame --></div>
+						@elseif($post->category_id == 3)
+							<div class="colelem barra50" style="background-color: var(--bg-color-harvest-gold)"><!-- simple frame --></div>
+						@elseif($post->category_id == 4)
+							<div class="colelem barra50" style="background-color: var(--bg-color-chestnut"><!-- simple frame --></div>
+						@else($post->category_id > 4)
+							<div class="colelem barra50" style="background-color: var(--bg-color-mineshaft)"><!-- simple frame --></div>
+						@endif
 
 		        <div class="colelem" style=" width:100%; margin-left:50%;"><!-- group -->
 

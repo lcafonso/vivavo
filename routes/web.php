@@ -12,7 +12,7 @@
 |
 */
 
-Route::redirect('/', 'home' );
+Route::redirect('/', 'home' ); 
 
 Auth::routes();
 
