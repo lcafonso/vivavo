@@ -275,7 +275,7 @@
                    	<div class="mask">
 						<h2>Reportagem RTP &quot;Agora Nós&quot;</h2>
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,...</p>
-						<a href="#" class="info">Ler mais</a>
+						<a href="{{ route('postdetails', '$post->slug') }}" class="info">Ler mais</a>
 					</div>
 
                 </div>
@@ -351,7 +351,7 @@
 	                 <div class="mask">
 		                 <h2>{{ $post->name }}</h2>
 		                 <p>{{ $post->excerpt }}</p>
-		                     <a href="#" class="info">Ler mais</a>
+		                     <a href="{{ route('post', $post->slug) }}" class="info">Ler mais</a>
 	                 </div>
 		        </div>
 		        <div class="colelem uBox">

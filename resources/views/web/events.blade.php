@@ -326,7 +326,7 @@
 	.timeline ol {
 	  font-size: 0;
 	  width: 100vw;
-	  padding: 250px 0;
+	  padding: 200px 0;
 	  transition: all 1s;
 	}
 
@@ -530,7 +530,7 @@
           <div>
             <time>{{ $event->data_time }}</time>
             <title>{{ $event->name }}</title>
-            {{ $event->excerpt }}
+            <p style="font-size: 9px;">{{ $event->excerpt }}</p>
           </div>
         </li>
         @endforeach
@@ -554,7 +554,7 @@
 
     <div class="container">
     <hr class="featurette-divider">
-    @foreach ($events as $k => $event) 
+    @foreach ($events as $k => $event)
       @if ($k % 2 == 0)
           <div class="row featurette">
             <div class="col-md-7">

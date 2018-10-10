@@ -1,5 +1,4 @@
 
-
 		<?php
 
 			
@@ -32,7 +31,7 @@
 			$nID = 0;
 		
 						
-			$rs = $conn->query("SELECT * FROM events") ;
+			$rs = $conn->query("SELECT * FROM pois") ;
 			
 			if(!$rs){
      			 print_r($conn->errorInfo());
@@ -40,7 +39,7 @@
 			
 		
 			
-			
+			//echo 'Latitude: ' . $myLat . '<br />';
       		//echo 'Longitude: ' . $myLng . '<br />';
       		//echo 'Distancia: ' . $myRng . '<br /><br />';
 			
@@ -62,65 +61,32 @@
       				
       				
       				$arr =  array('id' => strval($nID+1),
-								'avo_aldeia' => $row['grandma_id'],
-								'Nome' => $row['name'],
-								'Descricao' => $row['excerpt'],
-								'Local' => $row['local'],
-								'Image1' => $row['file1'],
-								'Image2' => $row['file2'],
-								'Image3' => $row['file3'],
-								'Image4' => $row['file4'],
-								'Image5' => $row['file5'],
-								'Programa' => $row['body'],
-								'Estado' => $row['status'], );
+								'avo_aldeia' => $row['local_id'],
+								'nome' => $row['name'],
+								'descricao' => $row['excerpt'],
+								'local' => $row['local'],
+								'image' => $row['image'],
+								'latitude' => $row['body'],
+								'icon' => $row['icon'],
+								'descricao2' => $row['body'],
+								'longitude' => $row['longitude'], );
 								
-								
-										
-				   
-					$sqltext = 'SELECT a.*, b.* FROM activit_event a INNER JOIN activits b ON  a.activit_id = b.id WHERE a.event_id ='.$arr['id'];
-                
-                    $rs2 = $conn->query($sqltext);
-                   
-                 
-					if(!$rs2){
-     			        print_r($conn->errorInfo());
-   			        }
-                     
-                    $x = 0;
-					foreach($rs2 as $atividade){
-                        $act_arr = array(
-                            'Data_Hora' => $atividade['scheduled'],
-                            'Titulo' => $atividade['name'],
-                            'Descricao' =>  $atividade['body'],
-                        );
-          
-						
-                        $arr_atividade[$x] = $act_arr ;	
-
-                        $x++;
-					};
-                    
-                  
-                
-                    $arr['Actividades'] = $arr_atividade ;
 					
       				$lista[$nID] = array_map("utf8_encode",$arr);
                     
-      				
+      				//echo '<br />';
+      				//echo $lista[$nID];
                     
       				$nID++;
 
       			}
    			
    			//echo 'Lista Final <br />';
-			
-			$resposta = array('events' => $lista );
-			
+			$resposta = array('markers' => $lista );
 			echo json_encode($resposta);
-			
           
 		?>
 
 
-	
+
 	

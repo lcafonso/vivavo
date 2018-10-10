@@ -204,8 +204,19 @@
             <ul class="nav navbar-nav ml-auto">
               <!-- Authentication Links -->
               @guest
-                <!-- <li class="nav-item"><a class="nav-link" href="{{ url('/') }}"><span class="ion ion-ios-cart"></span> </a></li> -->
-                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><span class="ion ion-ios-person"></span></a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="{{ url('/') }}"><span class="ion ion-ios-cart"></span> </a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><span class="ion ion-ios-person"></span></a></li> -->
+                <li class="nav-item dropdown" style="right: 0!important; margin-right: 30px!important;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="ion ion-ios-person"></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                        <a class="dropdown-item" href="{{ route('register') }}">Registrar</a>
+
+                    </div>
+                </li>
+
               @else
                  <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

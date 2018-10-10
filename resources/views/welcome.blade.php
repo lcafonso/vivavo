@@ -392,7 +392,7 @@
 			                <div class="mask">
 			                    <h2>Reportagem RTP &quot;Agora Nós&quot;</h2>
 			                    <p>Programa da RTP Agora Nós</p>
-			                        <a href="#" class="info">Assistir</a>
+			                        <a href="{{ route('postdetails', '$post->slug') }}" class="info">Assistir</a>
 			                </div>
 			            </div>
 

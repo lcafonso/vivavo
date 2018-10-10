@@ -124,7 +124,7 @@
 			<div class="col-md-6" style="font-size: 0.8em; padding-right: 10em;">
 				 <p>natural e paisagístico tem como objetivo principal criar experiências turísticas únicas e proporcionar aos visitantes viver a autenticidade dos locais na companhia das “Avos”.</p>
 				 <p>Projeto de investigação inovador e abrangente, na área do Turismo, financiado pela Fundação para a Ciência e a Tecnologia (FCT), com cofinanciamento comunitário (Portugal 2020), em que colaboram oito investigadores de várias instituições de ensino superior, nomeadamente Instituto Politécnico de Bragança e Instituto Politécnico Viana do Castelo, sob a coordenação da Professora Doutora Paula Odete Fernandes, do Instituto Politécnico de Bragança. O projeto conta ainda com o contributo de cinco bolseiros de investigação.  </p>
-				<p><a class="btn btn-secondary pull-right" href="#" role="button">Ver detalhes &raquo;</a></p>
+				<p><a class="btn btn-secondary pull-right" href="{{ route('aboutdetail') }}" role="button">Ver detalhes &raquo;</a></p>
 			</div>
 
     	</div>

@@ -12,7 +12,7 @@
 |
 */
 
-Route::redirect('/', 'home' ); 
+Route::redirect('/', 'home' );
 
 Auth::routes();
 
@@ -20,7 +20,10 @@ Auth::routes();
 Route::get('home', 'HomeController@index')->name('home');
 Route::get('news', 'Web\PageController@news')->name('news');
 Route::get('news/{slug}', 'Web\PageController@post')->name('post');
+Route::get('newsdetails/{slug}', 'Web\PageController@postdetails')->name('postdetails');
 Route::get('grandmaslist', 'Web\PageController@grandmaslist')->name('grandmaslist');
+Route::get('grandmaslist/{slug}', 'Web\PageController@grandmadetails')->name('grandmadetails');
+Route::get('grandmaeventslist/{slug}', 'Web\PageController@grandmaeventlist')->name('grandmaeventlist');
 Route::get('events', 'Web\PageController@events')->name('events');
 Route::get('events/{slug}', 'Web\PageController@event')->name('event');
 Route::get('booking/{slug}', 'Web\PageController@booking')->name('booking');
@@ -28,7 +31,10 @@ Route::get('category/{slug}', 'Web\PageController@category')->name('category');
 Route::get('tag/{slug}', 'Web\PageController@tag')->name('tag');
 Route::get('term', 'Web\PageController@term')->name('term');
 Route::get('about', 'Web\PageController@about')->name('about');
+Route::get('aboutdetail', 'Web\PageController@aboutdetail')->name('aboutdetail');
+
 Route::get('contacts', 'Web\PageController@contacts')->name('contacts');
+
 
 Route::resource('guests', 'Web\GuestController');
 

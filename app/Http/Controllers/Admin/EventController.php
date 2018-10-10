@@ -42,7 +42,7 @@ class EventController extends Controller
     public function create()
     {
         $grandmas = Grandma::orderBy('name','ASC')->pluck('name','id');
-        $activities = Activit::orderBy('name','ASC')>pluck('name','id');
+        $activities = Activit::orderBy('name','ASC')->pluck('name','id');
 
 
         return view('admin.events.create',compact('grandmas','activities'));

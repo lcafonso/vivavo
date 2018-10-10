@@ -13,11 +13,11 @@
 	</div>
 	<div class="form-group">
 		{{ Form::label('data_time', 'Data') }}
-		{{ Form::date('data_time', \Carbon\Carbon::now(), ['class' => ''] ) }}
+		{{ Form::date('data_time', \Carbon\Carbon::parse($event->data_time), ['class' => ''] ) }}
 	</div>
 	<div class="form-group">
 		{{ Form::label('data_time', 'Hora de inicio') }}
-		{{ Form::time('data_time', null, array('class' => '') ) }}
+		{{ Form::time('data_time', \Carbon\Carbon::parse($event->data_time) , array('class' => '') ) }}
 	</div>
 	<div class="form-group">
 		{{ Form::label('local', 'Local do evento') }}

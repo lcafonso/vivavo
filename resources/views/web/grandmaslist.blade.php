@@ -303,7 +303,7 @@
                       <div class="mask">
                           <h2>{{ $grandma->name }}</h2>
                           <p>{{ $grandma->local->name }}, {{ $grandma->local->district->name }}</p>
-                              <a href="#" class="info">Mais Informações</a>
+                              <a href="{{ route('grandmadetails', $grandma->slug) }}" class="info">Mais Informações</a>
                       </div>
                   </div>
 
@@ -323,7 +323,7 @@
 
                           <div class="grpelem  hoverbtn" style="padding-top: 10px;" >
                               Ver Eventos
-                              <a href="#">
+                              <a href="{{ route('grandmaeventlist', $grandma->slug) }}">
                                   <img src="img/SetaDireitaPretoPNG.png" />
                               </a>
                           </div>

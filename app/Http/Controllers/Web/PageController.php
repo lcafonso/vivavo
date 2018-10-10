@@ -27,6 +27,13 @@ class PageController extends Controller
     	return view('web.post', compact('post'));
     }
 
+    public function postdetails($slug) {
+
+    	$post = Post::where('slug', $slug)->first();
+
+    	return view('web.postdetails', compact('post'));
+    }
+
     public function events() {
     	$events = Event::orderBy('id', 'DESC')->paginate(3);
 
@@ -81,11 +88,29 @@ class PageController extends Controller
       return view('web.about');
     }
 
+    public function aboutdetail() {
+
+      return view('web.aboutdetail');
+    }
+
     public function contacts() {
 
       return view('web.contacts');
     }
 
+    //GrandmaDetails
+    public function grandmadetails($slug){
+      $grandma = Grandma::where('slug', $slug)->first();
+      return view('web.grandmadetails',compact('grandma'));
+    }
 
+    //GrandmaEventList
+    public function grandmaeventlist($slug){
+      $grandma = Grandma::where('slug', $slug)->first();
+      $events = Event::where('grandma_id',$grandma->id)->orderBy('id', 'DESC')->paginate(5);
+
+      return view('web.grandmaeventslist',compact('grandma','events'));
+
+    }
 
 }
